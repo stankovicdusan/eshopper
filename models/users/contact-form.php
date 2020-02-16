@@ -33,4 +33,6 @@ if(isset($_POST['submit'])){
     if(count($errors) == 0){
         $result = sendContactMail($email, $msg);
     }
+    
+    header("Location: ../../index.php?page=contact-us");
 }
