@@ -16,7 +16,7 @@ function getUser($email, $password){
 
 function registerUser($name, $username, $email, $password){
     global $conn;
-    $query = $conn->prepare("INSERT INTO korisnik VALUES ('', ?, ?, ?, ?, 1)");
+    $query = $conn->prepare("INSERT INTO korisnik VALUES (null, ?, ?, ?, ?, 1)");
     return $query->execute([$name, $username, $email, md5($password)]);
 }
 
