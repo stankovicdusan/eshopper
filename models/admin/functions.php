@@ -19,12 +19,13 @@ function getOneUser($id){
 
 function updateUserById($id, $name, $username, $email, $password, $role){
     global $conn;
+    $password = md5($password);
     $query = $conn->prepare("UPDATE korisnik SET ime = :ime, username = :username, email = :email, password = :pass, uloga_id = :u_id WHERE id_korisnik = :id");
     $query->bindParam(":id", $id);
     $query->bindParam(":ime", $name);
     $query->bindParam(":username", $username);
     $query->bindParam(":email", $email);
-    $query->bindParam(":pass", md5($password));
+    $query->bindParam(":pass", $password);
     $query->bindParam(":u_id", $role);
 
     return $query->execute();
