@@ -3,7 +3,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-right">Author: <span><a target="_blank" href="https://www.linkedin.com/in/dusan-stankovic-9bab68185/">Dusan Stankovic</a></span></p>
+					<p class="pull-left">Author: <span><a href="index.php?page=author">Dusan Stankovic</a></span></p>
 				</div>
 			</div>
 		</div>
